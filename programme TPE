@@ -1,0 +1,265 @@
+print("ce programme permet de calculer le rendement énergétique d'un des 3 moyens de production electrique presentéé dans le notre TPE ")
+obj = str(input("choissisez la centrale dont vous voulez calculer le rendement : "))
+
+repere_1 = "centrale thermodynamique"
+repere_2 = "centrale geothermique"
+repere_3 = "hydrolienne"
+
+if obj == repere_1:
+    def present(obj):# fonction pour presenter le programme
+
+        print("Quel est la taille de la ,", obj, "dont vous voulez evaluez le rendement")
+        print("information:")
+        print("une", obj, " de petite taille mesure en moyernne entre 10 et 30 hectares")
+        print("une", obj, " de taille moyenne mesure environ entre 30 et 150 hectares")
+        print("une", obj, " de grande taille mesure plus de 150 hectares")
+        print("\n")
+
+
+    present(obj)
+
+    taille = int(input("Quelle est la surface de la centrale en hectares : "))
+    power = int(input("Quelle la valeur du rendement energetique de la zone ou vous voulez placez votre centrale en kWh/m2/an ? : "))
+
+
+    def rapport(taille, power): # definition de la fonction pour calculer le rendement de la centrale
+        if 10 < taille < 30:
+            print("vous avez donc choisie une centrale thermodynamique de petite taille")
+        elif 30 < taille < 150:
+            print("vous avez donc choisie une centrale thermodynamique de taille moyenne ") # print de la taille de la centrale
+        elif taille > 150:
+            print("vous avez donc choisie une grande centrale thermodynamique")
+        if 700 < power <= 800:
+            rendement = 7.14 * 10 ** -4 * taille * power # calcul pour connaitre le rendement 7.14*10**-4 etant la constante pour un intervalle d'ensoillement 700 < x < 800
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 800 < power <= 900:
+            rendement = 6.25 * 10 ** -4 * taille * power# repetition de l'operation pour chaque intervallle
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 900 < power <= 1000:
+            rendement = 5.55 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 1000 < power <= 1100:
+            rendement = 5 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 1100 < power <= 1200:
+            rendement = 5 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 1200 < power <= 1300:
+            rendement = 4.45 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 1300 < power <= 1400:
+            rendement = 3.84 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 1400 < power <= 1500:
+            rendement = 3.57 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 1500 < power <= 1600:
+            rendement = 3.33 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 1600 < power <= 1700:
+            rendement = 3.12 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 1700 < power <= 1800:
+            rendement = 2.94 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 1800 < power <= 1900:
+            rendement = 2.77 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 1900 < power <= 2000:
+            rendement = 2.63 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 2000 < power <= 2100:
+            rendement = 2.5 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 2100 < power <= 2200:
+            rendement = 2.27 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 2200 < power <= 2300:
+            rendement = 2.17 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 2300 < power <= 2400:
+            rendement = 2.08 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 2400 < power <= 2500:
+            rendement = 2.08 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 2500 < power <= 2600:
+            rendement = 2 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 2600 < power <= 2700:
+            rendement = 1.92 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if power < 700:
+            print("la valeur de votre taux d'ensoillement n'existe pas ou les unités sont mauvaises")
+            exit()
+        if power > 2700:
+            print("un tel taux d'ensoillement n'existe pas")
+            exit()
+
+
+    def rapport1(taille, power):
+        if 10 < taille < 30:
+            print("vous avez donc choisie une centrale thermodynamique de petite taille")
+        elif 30 < taille < 150:
+            print("vous avez donc choisie une centrale thermodynamique de taille moyenne ")
+        elif taille > 150:
+            print("vous avez donc choisie une grande centrale thermodynamique")
+        if 700 < power <= 800:
+            rendement = 7.14 / 2 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 800 < power <= 900:
+            rendement = 6.25 / 2 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 900 < power <= 1000:
+            rendement = 5.55 / 2 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 1000 < power <= 1100:
+            rendement = 5 / 2 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 1100 < power <= 1200:
+            rendement = 5 / 2 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 1200 < power <= 1300:
+            rendement = 4.45 / 2 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 1300 < power <= 1400:
+            rendement = 3.84 / 2 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 1400 < power <= 1500:
+            rendement = 3.57 / 2 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 1500 < power <= 1600:
+            rendement = 3.33 / 2 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 1600 < power <= 1700:
+            rendement = 3.12 / 2 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 1700 < power <= 1800:
+            rendement = 2.94 / 2 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 1800 < power <= 1900:
+            rendement = 2.77 / 2 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 1900 < power <= 2000:
+            rendement = 2.63 / 2 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 2000 < power <= 2100:
+            rendement = 2.5 / 2 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 2100 < power <= 2200:
+            rendement = 2.27 / 2 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 2200 < power <= 2300:
+            rendement = 2.17 / 2 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 2300 < power <= 2400:
+            rendement = 2.08 / 2 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 2400 < power <= 2500:
+            rendement = 2.08 / 2 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 2500 < power <= 2600:
+            rendement = 2 / 2 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if 2600 < power <= 2700:
+            rendement = 1.92 / 2 * 10 ** -4 * taille * power
+            print("la puissance de votre centrale est de ", rendement, "MW")
+        if power < 700:
+            print("la valeur de votre taux d'ensoillement n'existe pas ou les unités sont mauvaises")
+            exit()
+        if power > 2700:
+            print("un tel taux d'ensoillement n'existe pas")
+            exit()
+
+    rapport(taille,power)
+    #if taille < 100:
+       # rapport(taille, power)
+    #else:
+     #   rapport1(taille, power)
+
+
+    def rapportobs(taille, power):  # ancienne fonction obsolete remplacer par la fonction rapport
+
+        if 10 <= taille <= 20:
+            print("vous avez donc choisie une centrale thermodynmique de petite taille")
+            rendement = power * 0.00307
+            print("le rendement de votre centrale est de : ", rendement, "MW")
+        if 20 <= taille <= 30:
+            print("vous avez donc choisie une centrale thermodynmique de petite taille")
+            rendement = power * 0.00457
+            print("le rendement de votre centrale est de : ", rendement, "MW")
+        if 30 <= taille <= 40:
+            print("vous avez donc choisie une centrale thermodynmique de moyenne taille")
+            rendement_2 = power * 0.00595
+            print("le rendement de votre centrale est de : ", rendement_2, "MW")
+        if 40 <= taille <= 50:
+            print("vous avez donc choisie une centrale thermodynmique de moyenne taille")
+            rendement_2 = power * 0.00795
+            print("le rendement de votre centrale est de : ", rendement_2, "MW")
+        if 50 <= taille <= 60:
+            print("vous avez donc choisie une centrale thermodynmique de moyenne taille")
+            rendement_2 = power * 0.00995
+            print("le rendement de votre centrale est de : ", rendement_2, "MW")
+        if 60 <= taille <= 70:
+            print("vous avez donc choisie une centrale thermodynmique de moyenne taille")
+            rendement_2 = power * 0.0195
+            print("le rendement de votre centrale est de : ", rendement_2, "MW")
+        if taille >= 150:
+            print("vous avez donc choisie une centrale thermodynmique de moyenne taille")
+            rendement_3 = power * 0.06
+            print("le rendement de votre centrale est de : ", rendement_3, "MW")
+        if taille >= 300:
+            print("vous avez donc choisie une centrale thermodynmique de moyenne taille")
+            rendement_4 = power * 0.08
+            print("le rendement de votre centrale est de : ", rendement_4, "MW")
+
+ #     exit()#
+#    if Geo_taille == "moyenne":
+ #           print("vous avez choisieune centrale geothermique de petite taile")
+  #          rendement_geo_2 = geo_energie*2.14  # formule de calcul 2
+   #         print("le rendement energetique de votre centrale est donc de :")
+    #        print(rendement_geo_2, "MW")
+#    if Geo_taille == "grande":
+ #           print("vous avez choiusie une centrale geothermique de grande taille")
+  #          rendement_geo_3 = geo_energie*2.5  # formule de calcul 3
+   #         print("le rendment de votre centrale geothermique est donc de  :")
+    #        print(rendement_geo_3, "MW")
+#
+
+ #if obj == repere_3:
+ #   print("vous avez choisie une hydrolienne"),
+ #   print("Quelle est la taille de l'hydrolienne dont vous voulez evaluer le rendement ? : "),
+  #  print("il y a 3 différentes tailles d'hydrolienne:")
+  #  print("petite")
+   # print("moyenne")
+    # print("grande")
+#    print("vous pouvez choisir l'amplitude des marées sur la carte dans la conclusion du TPE")
+ #   taille_hy = input(str("quelle est la taille de l'hydrolienne dont vous souhaitez evaluée la puissance en MW"))
+ #   power_hy = input(int("quel est la force du courant sur lequel vous voulez installé votre hydrolienne"))
+  #  if taille_hy == "petite" and 30 < power_hy < 40 :
+   #     rendement_hy = 0.25
+    #    print("la puissance electrique de votre hydrolienne sera de ", rendement_hy, "MW")
+#    if taille_hy == "petite" and  40 <= power_hy < 50:
+ #       rendement_hy = 0.45
+  #      print("la puissance electrique de votre hydrolienne sera de ", rendement_hy, "MW")
+   # if taille_hy == "petite" and 50 <= power_hy < 60 :
+#        rendement_hy = 0.6
+ #       print("la puissance electrique de votre hydrolienne sera de ", rendement_hy, "MW")
+  #  if taille_hy == "moyenne" and  60 <=power_hy < 70:
+   #     rendement_hy = 0.6
+    #    print("la puissance electrique de votre hydrolienne sera de ", rendement_hy, "MW")
+#    if taille_hy == "moyenne" and  70 <= power_hy < 80:
+#        rendement_hy = 0.75
+#        print("la puissance electrique de votre hydrolienne sera de ", rendement_hy, "MW")
+ #   if taille_hy == "moyenne" and 80 <=power_hy < 90:
+ #       rendement_hy = 0.90
+  #      print("la puissance electrique de votre hydrolienne sera de ", rendement_hy, "MW")
+   # if taille_hy == "grande" and 90 <= power_hy < 100:
+#        rendement_hy = 0.90
+#        print("la puissance electrique de votre hydrolienne sera de ", rendement_hy, "MW")
+ #   if taille_hy == "grande" and 100 <= power_hy < 110:
+#        rendement_hy = 1.05
+#        print("la puissance electrique de votre hydrolienne sera de ", rendement_hy, "MW")
+ #   if taille_hy == "grande" and power_hy == "fort":
+  #      rendement_hy = 1.20
+   #     print("la puissance electrique de votre hydrolienne sera de ", rendement_hy, "MW")
